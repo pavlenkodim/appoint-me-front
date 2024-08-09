@@ -16,7 +16,7 @@ const Wrapper: FC<IWrapper> = ({ children }) => {
 
 const Conteiner: FC<IWrapper> = ({ children }) => {
   return (
-    <div className="p-5 w-full flex min-h-screen flex-col items-center justify-between">
+    <div className="p-5 w-full flex min-h-[70vh] flex-col items-center justify-between">
       {children}
     </div>
   );
