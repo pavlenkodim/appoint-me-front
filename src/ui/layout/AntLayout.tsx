@@ -8,11 +8,11 @@ interface AntLayout extends HTMLAttributes<HTMLDivElement> {}
 
 const AntLayout: React.FC<AntLayout> = ({ children }) => {
   return (
-    <Layout>
+    <Layout className="bg-none">
       <Header className="flex items-center gap-2 text-2xl text-white">
         AppointMe
       </Header>
-      <Content style={{ padding: "0 48px" }}>
+      <Content className="bg-none">
         <div
           style={{
             // background: colorBgContainer,
