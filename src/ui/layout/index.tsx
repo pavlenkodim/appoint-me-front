@@ -8,7 +8,7 @@ interface IHeader extends HTMLAttributes<HTMLHeadElement> {
 
 const Wrapper: FC<IWrapper> = ({ children }) => {
   return (
-    <main className="max-w-[900px] w-full flex flex-col justify-center items-start">
+    <main className="max-w-[900px] w-full h-full flex flex-col">
       {children}
     </main>
   );
@@ -16,7 +16,7 @@ const Wrapper: FC<IWrapper> = ({ children }) => {
 
 const Conteiner: FC<IWrapper> = ({ children }) => {
   return (
-    <div className="p-5 w-full flex min-h-[70vh] flex-col items-center justify-between">
+    <div className="p-5 w-full flex flex-col items-center justify-between">
       {children}
     </div>
   );
@@ -24,7 +24,7 @@ const Conteiner: FC<IWrapper> = ({ children }) => {
 
 const Header: FC<IHeader> = ({ children, logo }) => {
   return (
-    <header className="flex w-full justify-between items-center min-h-[100px] border-b gap-3 border-[#333]">
+    <header className="flex w-full justify-between items-center min-h-[50px] border-b gap-3 border-[#333] px-5">
       <div>{logo}</div>
       <h1>{children}</h1>
       <div>
@@ -43,7 +43,7 @@ const Header: FC<IHeader> = ({ children, logo }) => {
 
 const Footer: FC<IWrapper> = ({ children }) => {
   return (
-    <footer className="flex w-full justify-between items-center min-h-[100px] border-t border-[#333]">
+    <footer className="flex w-full justify-between items-center min-h-[50px] border-t border-[#333] px-5">
       {children}
     </footer>
   );

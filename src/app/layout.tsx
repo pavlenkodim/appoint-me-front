@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Wrapper>
           <Header logo={"AppointMe"}></Header>
           <Conteiner>{children}</Conteiner>
