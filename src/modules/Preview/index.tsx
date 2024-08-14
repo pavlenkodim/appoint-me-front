@@ -1,22 +1,29 @@
-import Image from "next/image";
+import PreviewImage from "@/ui/Images/PreviewImage";
+import Section from "@/ui/Section";
 
-const ImagePlaseholder = () => (
-  // <Image src={"/image-plaseholder.png"} width={100} height={30} alt="nails" />
-  <div className="bg-gradient-to-r from-purple-500 to-pink-500 min-h-[150px] min-w-[100px] h-full w-full rounded-lg"></div>
-);
-
-const plaseholderData = ["", "", "", "", "", "", "", "", ""];
+const plaseholderData = [
+  "Комбо",
+  "Френч",
+  "Пидикюр",
+  "Натурель",
+  "Штучки",
+  "Дрючки",
+];
 
 const Preview = () => {
   return (
-    <div className="w-full text-center">
-      <h2 className="p-2">Preview</h2>
-      <div className="grid grid-cols-3 grid-rows-3 gap-3 w-full">
+    <Section title="Услуги которые могу вам понравиться">
+      <div className="grid grid-cols-3 max-md:grid-cols-1 grid-rows-2 gap-3 w-full">
         {plaseholderData.map((item, index) => (
-          <ImagePlaseholder key={index} />
+          <PreviewImage
+            key={index}
+            text={item}
+            image="/image-plaseholder.png"
+            price="1000"
+          />
         ))}
       </div>
-    </div>
+    </Section>
   );
 };
 
