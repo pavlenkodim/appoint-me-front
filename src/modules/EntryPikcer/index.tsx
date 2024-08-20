@@ -1,5 +1,5 @@
 import Section from "@/ui/Section";
-import { Calendar } from "antd";
+import Calendar from "@/components/Calendar/Calendar";
 
 const EntryPikcer = () => {
   return (
