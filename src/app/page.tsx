@@ -1,11 +1,15 @@
-import EntryPikcer from "@/modules/EntryPikcer";
-import Preview from "@/modules/Preview";
+import DateTimePikcer from "@/modules/DateTimePicker";
+import Map from "@/modules/Map";
+import RegisterOnService from "@/modules/RegisterOnService";
+import ServicePreview from "@/modules/ServicePreview";
 
 export default function Home() {
   return (
     <>
-      <Preview />
-      <EntryPikcer />
+      <ServicePreview />
+      <DateTimePikcer />
+      <RegisterOnService />
+      <Map />
     </>
   );
 }

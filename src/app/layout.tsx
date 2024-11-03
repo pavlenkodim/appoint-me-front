@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import layout from "@/ui/layout";
-
+import ButtonTextOutside from "@/ui/buttons/ButtonTextOutside";
+import { AbstractLogo, AccountBox } from "@/ui/icons";
 const inter = Inter({ subsets: ["latin"] });
 
 const { Wrapper, Conteiner, Header, Footer } = layout;
@@ -20,9 +21,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <div className="fixed-background"></div>
         <Wrapper>
-          <Header logo={"AppointMe"}></Header>
-          <Conteiner>{children}</Conteiner>
+          <Header
+            title="AppointMe"
+            logo={<AbstractLogo />}
+            description="Set a meeting time"
+          >
+            <ButtonTextOutside icon={<AccountBox />}>
+              ABOUT ME
+            </ButtonTextOutside>
+          </Header>
+          <main>
+            <Conteiner>{children}</Conteiner>
+          </main>
           <Footer>
             <span>Created by @pavlenkodim</span>
             <span>AppointMe ©{new Date().getFullYear()}</span>

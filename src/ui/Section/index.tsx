@@ -7,13 +7,13 @@ interface ISection extends HTMLAttributes<HTMLDivElement> {
   // title?: ReactNode;
 }
 export const Title: FC<ITitle> = ({ children, className, ...rest }) => {
-  return <h2 className={"p-2" + " " + className}>{children}</h2>;
+  return <h2 className={className} {...rest}>{children}</h2>;
 };
 
 const Section: FC<ISection> = ({ children, title, className, ...rest }) => {
   return (
-    <div className={"w-full text-center" + " " + className} {...rest}>
-      <Title className="text-start">{title}</Title>
+    <div className={"section w-full text-center" + " " + className} {...rest}>
+      <Title className="text-start uppercase">{title}</Title>
       {children}
     </div>
   );
